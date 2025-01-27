@@ -154,6 +154,7 @@ header h1 {
     position: relative;
     max-height: 90vh;
     overflow-y: auto;
+    box-sizing: border-box;
 }
 
 .close {
@@ -191,6 +192,7 @@ header h1 {
     font-size: 0.875rem;
     transition: all 0.2s ease;
     background-color: var(--background-color);
+    box-sizing: border-box;
 }
 
 .form-group input:focus,
@@ -234,12 +236,12 @@ header h1 {
         height: 100%;
         max-width: none;
         border-radius: 0;
-        padding: 1rem;
+        padding: 1.5rem;
     }
 
     .form-group input,
     .form-group textarea {
-        width: calc(100% - 1.5rem);
+        width: 100%;
         font-size: 16px; /* Prevents iOS zoom on input focus */
     }
 
@@ -248,24 +250,19 @@ header h1 {
     }
 
     .close {
-        right: 1rem;
-        top: 1rem;
+        right: 1.5rem;
+        top: 1.5rem;
     }
 
-    /* Adjust form spacing */
-    .form-group {
-        margin-bottom: 1rem;
-    }
-
-    /* Add some space at the bottom of the form for better scrolling */
+    /* Add padding to the form container */
     #neighborForm {
-        padding-bottom: 2rem;
+        padding: 1rem 0.5rem 2rem 0.5rem;
     }
 
-    /* Ensure the modal title doesn't overlap with the close button */
+    /* Update modal title spacing */
     #modalTitle {
-        padding-right: 2rem;
-        margin-top: 0;
+        padding-right: 2.5rem;
+        margin: 0.5rem 0 1.5rem 0;
         font-size: 1.25rem;
     }
 }
