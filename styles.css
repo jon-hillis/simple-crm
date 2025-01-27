@@ -19,6 +19,7 @@ body {
     background-color: var(--background-color);
     color: var(--text-color);
     line-height: 1.5;
+    padding-bottom: env(safe-area-inset-bottom, 20px);
 }
 
 .container {
@@ -151,6 +152,8 @@ header h1 {
     max-width: 500px;
     box-shadow: var(--shadow-md);
     position: relative;
+    max-height: 90vh;
+    overflow-y: auto;
 }
 
 .close {
@@ -231,5 +234,61 @@ header h1 {
         height: 100%;
         max-width: none;
         border-radius: 0;
+        padding: 1rem;
+    }
+
+    .form-group input,
+    .form-group textarea {
+        width: calc(100% - 1.5rem);
+        font-size: 16px; /* Prevents iOS zoom on input focus */
+    }
+
+    .neighbor-card {
+        padding: 1rem;
+    }
+
+    .close {
+        right: 1rem;
+        top: 1rem;
+    }
+
+    /* Adjust form spacing */
+    .form-group {
+        margin-bottom: 1rem;
+    }
+
+    /* Add some space at the bottom of the form for better scrolling */
+    #neighborForm {
+        padding-bottom: 2rem;
+    }
+
+    /* Ensure the modal title doesn't overlap with the close button */
+    #modalTitle {
+        padding-right: 2rem;
+        margin-top: 0;
+        font-size: 1.25rem;
+    }
+}
+
+/* Add styles for better touch targets on mobile */
+@media (max-width: 640px) {
+    .primary-btn {
+        padding: 0.875rem 1.5rem;
+        width: 100%;
+        justify-content: center;
+    }
+
+    .card-actions {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+
+    .card-actions button {
+        width: 100%;
+    }
+
+    .search-bar input {
+        padding: 0.875rem 1rem;
+        font-size: 16px; /* Prevents iOS zoom on input focus */
     }
 } 
